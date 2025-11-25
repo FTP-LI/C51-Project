@@ -1,0 +1,44 @@
+C51 COMPILER V9.54   BUZZER                                                                11/17/2025 11:10:37 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE BUZZER
+OBJECT MODULE PLACED IN .\Objects\BUZZER.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Hardware\BUZZER.c LARGE OPTIMIZE(8,SPEED) BROWSE INCDIR(.\Hardware;.\Sys
+                    -tem;.\User;C:\Keil_v5\C51\INC\STC) DEBUG OBJECTEXTEND PRINT(.\Listings\BUZZER.lst) OBJECT(.\Objects\BUZZER.obj)
+
+line level    source
+
+   1          #include <STC15F2K60S2.H>
+*** WARNING C318 IN LINE 1 OF Hardware\BUZZER.c: can't open file 'STC15F2K60S2.H'
+   2          #include "BUZZER.h"
+   3          #include "Delay.h"
+*** WARNING C318 IN LINE 1 OF .\System\Delay.h: can't open file 'STC15F2K60S2.H'
+*** WARNING C318 IN LINE 4 OF \Users\ATLAS\Documents\Github\C51-Project\STC15F2K60S2\基础学习\1-6 温度报警\System\Sys.h:
+             - can't open file 'STC15F2K60S2.H'
+   4          
+   5          sbit BUZZER = P1^5;
+*** ERROR C202 IN LINE 5 OF Hardware\BUZZER.c: 'P1': undefined identifier
+   6          
+   7          void BUZZER_ON(void)
+   8          {
+   9   1          BUZZER = 0;
+*** ERROR C202 IN LINE 9 OF Hardware\BUZZER.c: 'BUZZER': undefined identifier
+  10   1      }
+  11          
+  12          void BUZZER_OFF(void)
+  13          {
+  14   1          BUZZER = 1;
+*** ERROR C202 IN LINE 14 OF Hardware\BUZZER.c: 'BUZZER': undefined identifier
+  15   1      }
+  16          
+  17          void BUZZER_Flash(void)
+  18          {
+  19   1          BUZZER = 0;
+*** ERROR C202 IN LINE 19 OF Hardware\BUZZER.c: 'BUZZER': undefined identifier
+  20   1          delay_ms(100);
+  21   1          BUZZER = 1;
+*** ERROR C202 IN LINE 21 OF Hardware\BUZZER.c: 'BUZZER': undefined identifier
+  22   1          delay_ms(100);
+  23   1      }
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  5 ERROR(S)
